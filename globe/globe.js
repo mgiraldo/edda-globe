@@ -56,7 +56,7 @@ DAT.Globe = function(container, opts) {
   var zoomSpeed = 50;
 
   var mouse = { x: 0, y: 0 }, mouseOnDown = { x: 0, y: 0 };
-  var rotation = { x: 0, y: 0 },
+  var rotation = { x: Math.PI/2, y: Math.PI/2 },
       target = { x: Math.PI*3/2, y: Math.PI/6 },
       targetOnDown = { x: 0, y: 0 };
 
