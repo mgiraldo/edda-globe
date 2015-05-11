@@ -135,7 +135,8 @@ DAT.Globe = function(container, opts) {
 
     point = new THREE.Mesh(geometry, basicMaterial);
 
-    renderer = new THREE.WebGLRenderer({antialias: true});
+    renderer = new THREE.WebGLRenderer({antialias: true, preserveDrawingBuffer: true});
+
     renderer.setSize(w, h);
 
     renderer.domElement.style.position = 'absolute';
@@ -295,7 +296,6 @@ DAT.Globe = function(container, opts) {
 
   function onMouseDown(event) {
     event.preventDefault();
-    console.log("down");
 
     container.addEventListener('mousemove', onMouseMove, false);
     container.addEventListener('mouseup', onMouseUp, false);
@@ -326,7 +326,6 @@ DAT.Globe = function(container, opts) {
         mouse.x = - event.touches[0].clientX;
         mouse.y = event.touches[0].clientY;
     }
-    console.log("move", mouseOnDown.x, mouseOnDown.y, mouse.x, mouse.y, event);
 
     var zoomDamp = distance/1000;
 
@@ -338,7 +337,6 @@ DAT.Globe = function(container, opts) {
   }
 
   function onMouseUp(event) {
-    console.log("end");
     container.removeEventListener('mousemove', onMouseMove, false);
     container.removeEventListener('mouseup', onMouseUp, false);
     container.removeEventListener('mouseout', onMouseOut, false);
