@@ -23,7 +23,7 @@ DAT.Globe = function(container, opts) {
   };
   var imgDir = opts.imgDir || 'globe/';
 
-  var worldSize = 150;
+  var worldSize = 170;
 
   var callerPositions = [];
 
@@ -93,7 +93,7 @@ DAT.Globe = function(container, opts) {
     });
 
     mesh = new THREE.Mesh(geometry, shaderMaterial);
-    mesh.scale.set( 1.06, 1.06, 1.06 );
+    mesh.scale.set( 1.08, 1.08, 1.08 );
     scene.add(mesh);
 
     var brightMaterial = new THREE.MeshLambertMaterial({
