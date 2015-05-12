@@ -63,6 +63,7 @@ DAT.Globe = function(container, opts) {
   var distance = 1000, distanceTarget = 100000;
   var padding = 40;
   var PI_HALF = Math.PI * .5;
+  var PI = Math.PI;
 
   function init() {
     container.style.color = '#fff';
@@ -332,8 +333,8 @@ DAT.Globe = function(container, opts) {
     target.x = targetOnDown.x + (mouse.x - mouseOnDown.x) * 0.005 * zoomDamp;
     target.y = targetOnDown.y + (mouse.y - mouseOnDown.y) * 0.005 * zoomDamp;
 
-    target.y = target.y > PI_HALF ? PI_HALF : target.y;
-    target.y = target.y < - PI_HALF ? - PI_HALF : target.y;
+    target.y = target.y > PI ? PI : target.y;
+    target.y = target.y < - PI ? - PI : target.y;
   }
 
   function onMouseUp(event) {
