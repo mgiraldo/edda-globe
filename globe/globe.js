@@ -332,8 +332,8 @@ DAT.Globe = function(container, opts) {
     target.x = targetOnDown.x + (mouse.x - mouseOnDown.x) * 0.005 * zoomDamp;
     target.y = targetOnDown.y + (mouse.y - mouseOnDown.y) * 0.005 * zoomDamp;
 
-    target.y = target.y > PI_HALF ? PI_HALF : target.y;
-    target.y = target.y < - PI_HALF ? - PI_HALF : target.y;
+    target.y = target.y > PI_HALF ? -0.01 : target.y;
+    target.y = target.y < - PI_HALF ? 0.01: target.y;
   }
 
   function onMouseUp(event) {
