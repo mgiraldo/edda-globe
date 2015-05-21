@@ -90,7 +90,7 @@ DAT.Globe = function(container, opts) {
         fragmentShader: shader.fragmentShader,
         side: THREE.BackSide,
         blending: THREE.AdditiveBlending,
-        transparent: true
+        transparent: false
     });
 
     mesh = new THREE.Mesh(geometry, shaderMaterial);
