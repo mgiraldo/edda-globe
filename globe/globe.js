@@ -66,7 +66,6 @@ DAT.Globe = function(container, opts) {
 
   function init() {
     container.style.color = '#000';
-    container.style.backgroundColor = '#000';
     container.style.font = '13px/20px Arial, sans-serif';
 
     w = container.offsetWidth || window.innerWidth;
@@ -90,7 +89,7 @@ DAT.Globe = function(container, opts) {
         fragmentShader: shader.fragmentShader,
         side: THREE.BackSide,
         blending: THREE.AdditiveBlending,
-        transparent: false
+        transparent: true
     });
 
     mesh = new THREE.Mesh(geometry, shaderMaterial);
