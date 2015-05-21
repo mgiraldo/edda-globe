@@ -65,7 +65,8 @@ DAT.Globe = function(container, opts) {
   var PI_HALF = Math.PI * .5;
 
   function init() {
-    container.style.color = '#fff';
+    container.style.color = '#000';
+    container.style.backgroundColor = '#000';
     container.style.font = '13px/20px Arial, sans-serif';
 
     w = container.offsetWidth || window.innerWidth;
